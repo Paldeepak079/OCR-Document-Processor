@@ -1,6 +1,7 @@
 # OCR Extraction and Verification System
 
 This project is a local, privacy-focused OCR solution that extracts text from documents and verifies it against user input. It uses Microsoft's **TrOCR** model for high-accuracy text recognition and **FastAPI** for the backend.
+<img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/13ce78fb-d0d7-4da9-9d55-ce1459208c73" />
 
 ## Features
 - **Text Extraction**: Upload an image (ID card, form, etc.) to extract text.
@@ -50,3 +51,4 @@ This project is a local, privacy-focused OCR solution that extracts text from do
 
 ## Note on Performance
 The TrOCR model is a deep learning model. It requires some RAM and CPU/GPU power. The first run will download the model (~1GB), so please be patient.
+
