@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Extraction & Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>OCR Document Processor</h1>
+            <p>Upload a document to extract text and verify data.</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <div class="file-drop-area" id="drop-area">
+                    <span class="fake-btn">Choose File</span>
+                    <span class="file-msg">or drag and drop here</span>
+                    <input class="file-input" type="file" id="file-input" accept="image/*,application/pdf">
+                </div>
+
+                <div id="preview-container" class="hidden">
+                    <img id="image-preview" src="" alt="Document Preview">
+                </div>
+                <button id="extract-btn" class="primary-btn hidden">Extract Text</button>
+            </section>
+
+            <section class="results-section hidden" id="results-section">
+                <div class="form-container">
+                    <h2>Extracted Data</h2>
+
+                    <div class="input-group">
+                        <label for="raw-text">Raw Extracted Text</label>
+                        <textarea id="raw-text" rows="5"></textarea>
+                    </div>
+
+                    <div class="field-mapping-demo">
+                        <h3>Auto-Filled Fields</h3>
+                        <p class="small-text">These fields were automatically extracted from the text.</p>
+
+                        <div class="grid-row">
+                            <div class="input-group">
+                                <label for="field-name">Name</label>
+                                <input type="text" id="field-name" placeholder="Name">
+                            </div>
+                            <div class="input-group">
+                                <label for="field-age">Age</label>
+                                <input type="text" id="field-age" placeholder="Age">
+                            </div>
+                        </div>
+
+                        <div class="grid-row">
+                            <div class="input-group">
+                                <label for="field-gender">Gender</label>
+                                <input type="text" id="field-gender" placeholder="Gender">
+                            </div>
+                            <div class="input-group">
+                                <label for="field-id">ID Number</label>
+                                <input type="text" id="field-id" placeholder="ID Number">
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="field-address">Address</label>
+                            <input type="text" id="field-address" placeholder="Address">
+                        </div>
+
+                        <div class="grid-row">
+                            <div class="input-group">
+                                <label for="field-email">Email</label>
+                                <input type="text" id="field-email" placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                                <label for="field-phone">Phone</label>
+                                <input type="text" id="field-phone" placeholder="Phone">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="verify-btn" class="secondary-btn">Verify Data</button>
+                </div>
+
+                <div class="verification-container hidden" id="verification-container">
+                    <h2>Verification Results</h2>
+                    <div id="verification-results"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
